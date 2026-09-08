@@ -12,7 +12,9 @@ Dieses Repository wird von zwei Entwicklern gepflegt:
 
 ## Git Workflow & Code Review
 
-Manuel wird hauptsächlich an diesem Repository arbeiten und alles automatisiert mit GitHub Copilot machen. Er ist kein Softwareentwickler und kennt sich technisch nicht aus. Er ist nur am Content und an der UX interessiert.
+Manuel arbeitet hauptsächlich an diesem Repository und erledigt alles automatisiert mit GitHub Copilot. Er ist kein Softwareentwickler und kennt sich technisch nicht aus – er interessiert sich ausschließlich für Content und UX. Du musst ihn dabei maximal unterstützen und am besten auch alle Git-Operationen automatisch ausführen.
+
+Jörg ist Softwareentwickler und schaut nur gelegentlich über das Repo, macht ein Code-Review und rückt technische Dinge gerade.
 
 ---
 
