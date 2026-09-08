@@ -32,7 +32,13 @@ In VS Code über die Extensions-Ansicht (`Strg+Shift+X`) installieren:
 - In VS Code unten links auf das Account-Icon klicken und mit dem eigenen GitHub-Account anmelden.
 - Für die Nutzung von Copilot Chat wird ein **GitHub Copilot Pro** Abo (ca. 10 USD/Monat) benötigt, abschließbar unter [github.com/settings/copilot](https://github.com/settings/copilot).
 
-### 4. Repository klonen
+### 4. Copilot Chat öffnen
+
+- Das Chat-Fenster öffnet sich über das Copilot-Symbol oben rechts in der VS Code Titelleiste, über das Symbol in der linken Seitenleiste oder per Tastenkombination `Strg+Alt+I`.
+- Beim allerersten Öffnen erscheint eventuell eine Meldung, dass sich VS Code bei GitHub anmelden möchte ("Sign in with GitHub"). Auf **"Anmelden"** bzw. **"Allow"** klicken – es öffnet sich der Browser, in dem der Zugriff für VS Code bestätigt werden muss. Anschließend zurück zu VS Code wechseln, das Chat-Fenster ist danach einsatzbereit.
+- Ist man bereits wie in Schritt 3 beschrieben mit dem GitHub-Account angemeldet, öffnet sich der Chat direkt ohne weitere Anmeldung.
+
+### 5. Repository klonen
 
 1. Befehlspalette öffnen (`Strg+Shift+P`) → **"Git: Clone"** eingeben und auswählen.
 2. Die URL dieses Repositorys einfügen: `https://github.com/Huettengemeinde/familie-im-aufbruch.github.io`
@@ -41,7 +47,7 @@ In VS Code über die Extensions-Ansicht (`Strg+Shift+X`) installieren:
 
 Damit liegt die komplette Webseite jetzt als Kopie auf dem eigenen PC und kann in VS Code bearbeitet werden. Ein Klonen ist nur einmal nötig – danach reicht es, den Ordner bei Bedarf einfach wieder in VS Code zu öffnen (**Datei → Ordner öffnen…**).
 
-### 5. Wo befinden sich die Inhalte der Webseite?
+### 6. Wo befinden sich die Inhalte der Webseite?
 
 - **`docs/index.html`** – der eigentliche Text und Aufbau der Webseite.
 - **`docs/main.css`** – das gesamte Design (Farben, Schriften, Abstände). Styles gehören immer hierher, nie direkt in die HTML-Datei.
@@ -49,7 +55,7 @@ Damit liegt die komplette Webseite jetzt als Kopie auf dem eigenen PC und kann i
 
 Auf JavaScript wird bewusst verzichtet, die Seite bleibt reines, statisches HTML. Wer mit GitHub Copilot Chat arbeitet, muss sich darum aber nicht selbst kümmern – einfach beschreiben, was geändert werden soll (z. B. *"Ändere die Überschrift auf der Startseite in ..."* oder *"Füge ein neues Bild im Abschnitt Über uns ein"*), Copilot hält sich automatisch an diese Regeln.
 
-### 6. Lokale Vorschau der Webseite ansehen
+### 7. Lokale Vorschau der Webseite ansehen
 
 Damit man Änderungen sofort im Browser sehen kann, ohne etwas zu veröffentlichen:
 
@@ -60,7 +66,7 @@ Damit man Änderungen sofort im Browser sehen kann, ohne etwas zu veröffentlich
 
 **Entwicklertools zum Testen:** Im Browser mit **F12** die Entwicklertools öffnen. Dort gibt es ein Symbol für ein Handy/Tablet (meist oben links in den Entwicklertools, "Responsive Design Mode" bzw. "Device Toolbar"). Damit lässt sich sehen, wie die Webseite auf unterschiedlichen Geräten aussieht – z. B. Laptop, Tablet und Smartphone – ohne die Geräte tatsächlich zu besitzen.
 
-### 7. Neuen Branch erstellen, bevor man Änderungen macht
+### 8. Neuen Branch erstellen, bevor man Änderungen macht
 
 Bevor Änderungen vorgenommen werden, sollte immer ein eigener Branch angelegt werden (das ist wie eine eigene Arbeitskopie, die den Hauptstand der Seite nicht durcheinanderbringt):
 
@@ -70,13 +76,13 @@ Bevor Änderungen vorgenommen werden, sollte immer ein eigener Branch angelegt w
 
 > 💡 **Einfacher geht's mit Copilot:** Diesen Schritt muss man nicht selbst über die Menüs klicken. Es reicht, Copilot Chat zu schreiben: *"Erstelle einen neuen Branch für meine Änderung an der Startseite"* – Copilot führt den nötigen Git-Befehl automatisch im Hintergrund aus.
 
-### 8. Änderungen vornehmen
+### 9. Änderungen vornehmen
 
-Änderungen können direkt selbst im Editor gemacht werden, oder man lässt sich von **GitHub Copilot Chat** helfen: Chat öffnen (Symbol in der Seitenleiste oder `Strg+Alt+I`), beschreiben was geändert werden soll, und die Änderungen von Copilot direkt in den Dateien übernehmen lassen. Mit der Live-Vorschau aus Schritt 6 lässt sich das Ergebnis sofort kontrollieren.
+Änderungen können direkt selbst im Editor gemacht werden, oder man lässt sich von **GitHub Copilot Chat** helfen: Chat öffnen (wie in Schritt 4 beschrieben), beschreiben was geändert werden soll, und die Änderungen von Copilot direkt in den Dateien übernehmen lassen. Mit der Live-Vorschau aus Schritt 7 lässt sich das Ergebnis sofort kontrollieren.
 
 **Nicht vergessen:** Geänderte Dateien vor dem nächsten Schritt speichern (`Strg+S`). Ein kleiner Punkt statt eines Kreuzes im Tab-Reiter oben zeigt an, dass eine Datei noch ungespeichert ist. Wenn Copilot die Änderungen vornimmt, speichert es normalerweise automatisch mit ab.
 
-### 9. Änderungen speichern (Commit) und hochladen (Push)
+### 10. Änderungen speichern (Commit) und hochladen (Push)
 
 1. Auf das Source-Control-Symbol in der linken Seitenleiste klicken (oder `Strg+Shift+G`).
 2. Oben ein kurzes Textfeld ausfüllen, das beschreibt, was geändert wurde (z. B. "Text auf Startseite angepasst").
@@ -85,7 +91,7 @@ Bevor Änderungen vorgenommen werden, sollte immer ein eigener Branch angelegt w
 
 > 💡 **Einfacher geht's mit Copilot:** Auch Commit und Push müssen nicht manuell angeklickt werden. Einfach in Copilot Chat schreiben: *"Committe meine Änderungen mit einer passenden Nachricht und lade sie hoch"* – Copilot formuliert die Commit-Nachricht und führt Commit sowie Push selbstständig aus.
 
-### 10. Pull Request erstellen
+### 11. Pull Request erstellen
 
 Ein Pull Request ist die Anfrage, die eigenen Änderungen in die eigentliche Webseite zu übernehmen:
 
@@ -97,13 +103,13 @@ Jörg bekommt den Pull Request danach automatisch zur Prüfung und kümmert sich
 
 > 💡 **Einfacher geht's mit Copilot:** Auch den Pull Request muss man nicht über die Menüs erstellen. Einfach in Copilot Chat schreiben: *"Erstelle einen Pull Request für meine Änderungen"* – Copilot legt ihn inklusive Titel und Beschreibung an.
 
-### 11. Bei Fragen einfach Copilot Chat fragen
+### 12. Bei Fragen einfach Copilot Chat fragen
 
 Egal ob "Wie erstelle ich einen neuen Branch?", "Wie füge ich ein Bild ein?" oder "Warum funktioniert etwas nicht?" – GitHub Copilot Chat in VS Code kann jederzeit auf Deutsch gefragt werden und hilft direkt im Editor weiter.
 
 **Wichtig zu wissen:** Man muss sich keinen einzigen Git-Befehl merken oder wissen, in welchem Menü etwas zu finden ist. Branch erstellen, Commit, Push und Pull Request – **alle** diese Schritte aus dieser Anleitung kann man stattdessen einfach in normalen deutschen Sätzen von Copilot Chat erledigen lassen, z. B. *"Speichere meine Änderungen, lade sie hoch und erstelle einen Pull Request"* macht Copilot in einem Rutsch komplett selbstständig.
 
-### 12. Bereit für die nächste Änderung
+### 13. Bereit für die nächste Änderung
 
 Sobald Jörg den Pull Request geprüft und übernommen ("gemerged") hat, ist die Änderung offiziell auf der Webseite. Für die nächste Änderung:
 
