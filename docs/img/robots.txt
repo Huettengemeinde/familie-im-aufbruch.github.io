@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://familie-im-aufbruch.de/sitemap.xml
