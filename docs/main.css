@@ -99,6 +99,7 @@ img { max-width: 100%; display: block; }
 /* ---------- Abstände (margin/padding/gap) ---------- */
 [class~="mx-auto"] { margin-left: auto; margin-right: auto; }
 [class~="ml-2"] { margin-left: 0.5rem; }
+[class~="ml-3"] { margin-left: 0.75rem; }
 [class~="mb-2"] { margin-bottom: 0.5rem; }
 [class~="mb-3"] { margin-bottom: 0.75rem; }
 [class~="mb-4"] { margin-bottom: 1rem; }
@@ -193,6 +194,7 @@ img { max-width: 100%; display: block; }
 [class~="text-left"] { text-align: left; }
 [class~="text-center"] { text-align: center; }
 [class~="uppercase"] { text-transform: uppercase; }
+[class~="italic"] { font-style: italic; }
 [class~="line-through"] { text-decoration-line: line-through; }
 [class~="leading-none"] { line-height: 1; }
 [class~="leading-snug"] { line-height: 1.375; }
@@ -334,6 +336,7 @@ img { max-width: 100%; display: block; }
     [class~="md:p-10"] { padding: 2.5rem; }
     [class~="md:mb-16"] { margin-bottom: 4rem; }
     [class~="md:mt-12"] { margin-top: 3rem; }
+    [class~="md:ml-5"] { margin-left: 1.25rem; }
     [class~="md:gap-4"] { gap: 1rem; }
     [class~="md:gap-5"] { gap: 1.25rem; }
     [class~="md:gap-10"] { gap: 2.5rem; }
