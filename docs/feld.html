@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="de" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Das Feld – Familie im Aufbruch</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body class="custom-bg text-earth-800 antialiased min-h-screen">
+
+    <!-- Navigation -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-[#fcfbfa]/90 backdrop-blur-md border-b border-earth-200">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="index.html" class="text-xl font-bold tracking-tight text-earth-900 serif">Familie im Aufbruch</a>
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-earth-800">
+                <a href="index.html#geschichte" class="hover:text-nature-green transition">Unsere Geschichte</a>
+                <a href="werkstatt.html" class="hover:text-workshop-blue transition">Die Werkstatt</a>
+                <a href="feld.html" class="hover:text-nature-green transition">Das Feld</a>
+                <a href="#kontakt" class="bg-nature-green text-white px-5 py-2.5 rounded-full hover:bg-opacity-90 transition shadow-sm">Kontakt</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- BEREICH: DAS FELD (INKL. BILDER IN DEN UNTEREN KACHELN) -->
+    <section id="feld" class="pt-32 pb-24 bg-nature-light/40 backdrop-blur-sm px-6 border-t border-earth-200">
+        <div class="max-w-4xl mx-auto space-y-8">
+            <h2 class="text-4xl font-bold text-earth-900">Das Feld</h2>
+            <p class="text-earth-800/80 font-light leading-relaxed text-lg">Frisches Gemüse direkt von hier. Hier wächst unser saisonales Gemüse.</p>
+            
+            <!-- Acker-Geschichten mit eigenen Bildern -->
+            <div class="space-y-10 pt-4">
+                <!-- Gemeinsam säen, pflegen und ernten -->
+                <article class="bg-white rounded-2xl overflow-hidden border border-earth-200">
+                    <div class="w-full overflow-hidden bg-earth-100">
+                        <img src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=1200&q=80" alt="Tomaten im Gewächshaus" class="w-full h-[28rem] md:h-[36rem] object-cover object-center">
+                    </div>
+                    <div class="p-7 md:p-9 max-w-3xl">
+                        <h3 class="text-2xl font-semibold text-earth-900 mb-3">Gemeinsam säen, pflegen und ernten</h3>
+                        <p class="text-base text-earth-800/75 font-light leading-relaxed">Wir wollen selbst schöpferisch tätig sein: Mit unseren Händen bearbeiten wir die Erde und erleben hautnah, wie aus einem kleinen Samen leckeres Gemüse wächst.</p>
+                    </div>
+                </article>
+
+                <!-- Großzügig weitergeben -->
+                <article class="bg-white rounded-2xl overflow-hidden border border-earth-200 grid md:grid-cols-[1.05fr_0.95fr] items-stretch">
+                    <div class="p-7 md:p-10 flex flex-col justify-center order-2 md:order-1">
+                        <h3 class="text-2xl font-semibold text-earth-900 mb-3">Großzügig weitergeben</h3>
+                        <p class="text-base text-earth-800/75 font-light leading-relaxed">Wir wollen ein Segen für unser Umfeld sein. Deshalb verschenken und verkaufen wir unsere Ernteüberschüsse direkt an Nachbarn und die Menschen vor Ort.</p>
+                    </div>
+                    <div class="min-h-[26rem] md:min-h-[32rem] overflow-hidden bg-earth-100 order-1 md:order-2">
+                        <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=1200&q=80" alt="Tomatenstand vor dem Garten" class="w-full h-full object-cover object-center">
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="kontakt" class="bg-earth-900 text-earth-100 py-16 px-6">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 mb-12">
+            <div class="space-y-4">
+                <h3 class="text-2xl font-bold serif text-white">Familie im Aufbruch</h3>
+                <p class="text-earth-300 font-light text-sm max-w-sm">Wachsen. Begegnen. Gemeinsam leben. Besuche uns auf dem Feld oder nimm an der Werkstatt teil.</p>
+            </div>
+            <div class="space-y-4">
+                <h4 class="text-lg font-semibold text-white">Kontakt & Anmeldung</h4>
+                <p class="text-earth-300 text-sm font-light">Schreib uns einfach eine kurze Nachricht:</p>
+                <a href="mailto:manu.schick@gmx.de" class="inline-block bg-nature-green text-white px-6 py-2.5 rounded-full text-sm font-semibold hover:bg-opacity-90 transition">Nachricht schreiben</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

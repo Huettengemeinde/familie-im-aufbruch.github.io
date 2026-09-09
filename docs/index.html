@@ -1,15 +1,98 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="de" class="scroll-smooth">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Familie im Aufbruch</title>
-	<link rel="stylesheet" href="main.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Familie im Aufbruch – Wachsen. Begegnen. Gemeinsam leben.</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
 </head>
-<body>
-	<main>
-		<h1>Familie im Aufbruch</h1>
-		<p>Coming soon...</p>
-	</main>
+<body class="custom-bg text-earth-800 antialiased min-h-screen">
+
+    <!-- Navigation -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-[#fcfbfa]/90 backdrop-blur-md border-b border-earth-200">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="index.html" class="text-xl font-bold tracking-tight text-earth-900 serif">Familie im Aufbruch</a>
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-earth-800">
+                <a href="index.html#geschichte" class="hover:text-nature-green transition">Unsere Geschichte</a>
+                <a href="werkstatt.html" class="hover:text-workshop-blue transition">Die Werkstatt</a>
+                <a href="feld.html" class="hover:text-nature-green transition">Das Feld</a>
+                <a href="#kontakt" class="bg-nature-green text-white px-5 py-2.5 rounded-full hover:bg-opacity-90 transition shadow-sm">Kontakt</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO BEREICH MIT KARTEN-BILDERN -->
+    <section class="relative min-h-screen flex items-center justify-center pt-24 pb-16 px-6 overflow-hidden">
+        <div class="max-w-4xl mx-auto text-center relative z-10 space-y-8">
+            <h1 class="text-5xl md:text-7xl font-bold tracking-tight text-earth-900 leading-[1.1]">Familie im Aufbruch</h1>
+            <p class="text-2xl md:text-3xl text-nature-green font-light tracking-wide serif">Wachsen. Begegnen. Gemeinsam leben.</p>
+
+            <div class="grid md:grid-cols-2 gap-6 pt-6 max-w-3xl mx-auto">
+                <!-- Werkstatt Karte mit Bild -->
+                <a href="werkstatt.html" class="group relative bg-white/95 backdrop-blur-sm rounded-2xl overflow-hidden shadow-sm border border-earth-200 hover:border-workshop-blue hover:shadow-md transition-all text-left flex flex-col justify-between">
+                    <div class="h-44 w-full overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=600&q=80" alt="Die Werkstatt" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h2 class="text-2xl font-bold text-earth-900 mb-2 group-hover:text-workshop-blue transition">Die Werkstatt</h2>
+                        <p class="text-earth-800/70 text-sm leading-relaxed">StoryWerkstatt, Vorträge und Räume der Ausrichtung. Wir wollen Familien helfen, prägende Geschichten zu erkennen und die Story Jesu im Alltag zu leben.</p>
+                    </div>
+                    <div class="px-6 pb-6 flex items-center text-sm font-semibold text-workshop-blue">Zur Werkstatt <span class="ml-2 group-hover:translate-x-1 transition">→</span></div>
+                </a>
+
+                <!-- Feld Karte mit Bild -->
+                <a href="feld.html" class="group relative bg-white/95 backdrop-blur-sm rounded-2xl overflow-hidden shadow-sm border border-earth-200 hover:border-nature-green hover:shadow-md transition-all text-left flex flex-col justify-between">
+                    <div class="h-44 w-full overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=600&q=80" alt="Das Feld" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h2 class="text-2xl font-bold text-earth-900 mb-2 group-hover:text-nature-green transition">Das Feld</h2>
+                        <p class="text-earth-800/70 text-sm leading-relaxed">Frisches Gemüse direkt vom Feld. Hier bauen wir an, ernten und verschenken oder verkaufen unsere Überschüsse.</p>
+                    </div>
+                    <div class="px-6 pb-6 flex items-center text-sm font-semibold text-nature-green">Zum Feld <span class="ml-2 group-hover:translate-x-1 transition">→</span></div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- UNSERE GESCHICHTE -->
+    <section id="geschichte" class="py-24 bg-white/80 backdrop-blur-sm px-6 border-t border-earth-200">
+        <div class="max-w-5xl mx-auto space-y-12">
+            <div class="text-center space-y-4">
+                <h2 class="text-3xl md:text-4xl font-bold text-earth-900">Unsere Geschichte</h2>
+                <div class="w-12 h-0.5 bg-nature-green mx-auto"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-10 items-center">
+                <div class="prose prose-lg text-earth-800/80 font-light space-y-6 leading-relaxed">
+                    <p>Familie im Aufbruch ist aus der tiefen Überzeugung entstanden, dass das Leben mehr ist als der Versuch, es sich im privaten Kreis möglichst bequem zu machen. Familie ist nicht nur ein reiner Wohlfühlort – sie ist ein geschützter Raum, der uns stärkt, um nach außen hin handlungsfähig zu sein.</p>
+                    <p>Deshalb schlagen bei uns zwei Herzen in einer Brust: <strong>die Werkstatt und das Feld.</strong><br>Zwei unterschiedliche Orte – und doch geht es um dasselbe: <strong>säen, begleiten, wachsen lassen und weitergeben.</strong></p>
+                <p class="text-xl md:text-2xl font-semibold text-earth-900 leading-snug">Wir wollen Räume schaffen, in denen Leben wachsen kann.</p>
+                </div>
+                <div class="relative">
+                    <div class="absolute -inset-2 bg-nature-green/10 rounded-3xl transform rotate-1"></div>
+                    <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=800&q=80" alt="Natur und Gemeinschaft" class="relative rounded-2xl shadow-md w-full h-72 object-cover border border-earth-200">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="kontakt" class="bg-earth-900 text-earth-100 py-16 px-6">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 mb-12">
+            <div class="space-y-4">
+                <h3 class="text-2xl font-bold serif text-white">Familie im Aufbruch</h3>
+                <p class="text-earth-300 font-light text-sm max-w-sm">Wachsen. Begegnen. Gemeinsam leben. Besuche uns auf dem Feld oder nimm an der Werkstatt teil.</p>
+            </div>
+            <div class="space-y-4">
+                <h4 class="text-lg font-semibold text-white">Kontakt & Anmeldung</h4>
+                <p class="text-earth-300 text-sm font-light">Schreib uns einfach eine kurze Nachricht:</p>
+                <a href="mailto:manu.schick@gmx.de" class="inline-block bg-nature-green text-white px-6 py-2.5 rounded-full text-sm font-semibold hover:bg-opacity-90 transition">Nachricht schreiben</a>
+            </div>
+        </div>
+    </footer>
+
 </body>
 </html>
