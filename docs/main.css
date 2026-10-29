@@ -47,6 +47,26 @@ img { max-width: 100%; display: block; }
 .margin-note { font-family:'Playfair Display',serif; font-style:italic; transform:rotate(-3deg); color:rgba(74,96,122,.72); }
 
 /* ---------- Layout ---------- */
+.site-header-inner { gap: 1.5rem; }
+.site-nav { display: flex; align-items: center; gap: 2rem; }
+.site-nav > a, .nav-dropdown > summary { cursor: pointer; }
+.nav-dropdown { position: relative; }
+.nav-dropdown > summary { list-style: none; }
+.nav-dropdown > summary::-webkit-details-marker { display: none; }
+.nav-dropdown > summary:after { content: '⌄'; margin-left: .35rem; }
+.nav-menu { position: absolute; top: calc(100% + .75rem); left: -.75rem; z-index: 60; min-width: 13rem; padding: .5rem; background: #fcfbfa; border: 1px solid #e5ddd3; box-shadow: 0 8px 24px rgba(28,35,30,.12); }
+.nav-menu a { display: block; padding: .7rem .75rem; }
+.nav-menu a:hover, .site-nav > a:hover, .nav-dropdown > summary:hover { color: #3b533f; }
+.home-vision { max-width: 54rem; margin-inline: auto; line-height: 1.5; }
+.content-band { padding: 5rem 1.5rem; border-top: 1px solid #e5ddd3; }
+.content-inner { max-width: 72rem; margin: 0 auto; }
+.pillar-grid, .offer-grid, .material-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem; }
+.pillar-panel, .offer-item, .material-item { padding: 1.75rem; background: rgba(255,255,255,.82); border: 1px solid #e5ddd3; }
+.offer-item h3, .material-item h3 { margin: 0 0 .75rem; }
+.section-kicker { color: #4a607a; font-size: .75rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+.blessing-callout { margin-top: 2rem; padding: 1.5rem; border-left: 4px solid #3b533f; background: #e8ede8; }
+.blessing-callout strong { display: block; margin-bottom: .5rem; }
+
 [class~="relative"] { position: relative; }
 [class~="absolute"] { position: absolute; }
 [class~="fixed"] { position: fixed; }
@@ -369,6 +389,13 @@ img { max-width: 100%; display: block; }
 }
 
 @media (max-width: 767px) {
+    .site-header { position: sticky; }
+    .site-header-inner { height: auto; min-height: 5rem; padding-top: .75rem; padding-bottom: .75rem; align-items: flex-start; flex-direction: column; gap: .75rem; }
+    .site-nav { width: 100%; justify-content: space-between; gap: .75rem; font-size: .82rem; }
+    .nav-menu { left: 0; }
+    .site-header + main { padding-top: 1.5rem; }
+    .pillar-grid, .offer-grid, .material-grid { grid-template-columns: 1fr; }
+    .content-band { padding: 3.5rem 1.25rem; }
     .thread-line { left: 16px; }
     .story-path { display: none; }
 }
