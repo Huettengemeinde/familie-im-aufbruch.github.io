@@ -46,6 +46,43 @@ img { max-width: 100%; display: block; }
 .story-symbol path, .story-symbol circle, .story-symbol rect, .story-symbol line { vector-effect:non-scaling-stroke; stroke-linecap:round; stroke-linejoin:round; }
 .margin-note { font-family:'Playfair Display',serif; font-style:italic; transform:rotate(-3deg); color:rgba(74,96,122,.72); }
 
+/* ---------- Der Tisch: Angebote als Sitzplätze am Tisch ---------- */
+.table-overview { position: relative; margin-bottom: 4rem; padding: 1rem; text-align: center; }
+.table-overview .section-kicker { display: block; margin-bottom: .5rem; }
+.table-overview h2 { margin: 0 0 2.5rem; }
+
+.table-scene { position: relative; display: grid; grid-template-columns: 1fr; grid-template-areas: "table" "family-heading" "seat-bottom" "seat-left" "community-heading" "seat-top" "seat-huettenzeit" "seat-right" "seat-montagskicker" "seat-plattenabend"; gap: 1rem; align-items: center; text-align: left; }
+
+.table-shape { grid-area: table; position: relative; width: 100%; max-width: 360px; margin: 0 auto; opacity: .8; }
+.table-shape svg { width: 130%; max-width: none; height: auto; margin-left: -15%; display: block; }
+.table-label { position: absolute; z-index: 1; top: 50%; left: 50%; width: 70%; margin: 0; transform: translate(-50%, -50%); color: #1c231e; font-size: 1.5rem; text-align: center; }
+.table-shape .table-top { fill: rgba(183,131,85,.14); stroke: rgba(183,131,85,.5); stroke-width: 1.5; }
+.table-shape .table-grain { fill: none; stroke: rgba(183,131,85,.35); stroke-width: 1; stroke-dasharray: 3 7; }
+.table-chairs { fill: none; stroke: rgba(183,131,85,.9); stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+.table-chairs-4 { display: none; stroke: rgba(183,131,85,.75); stroke-width: 1.8; stroke-dasharray: 3 3; }
+
+.seat { position: relative; display: flex; align-items: flex-start; gap: 1rem; padding: 1rem 0 0; border-top: 2px solid rgba(183,131,85,.4); text-align: left; }
+.seat-chair { flex: 0 0 auto; width: 2.75rem; height: 2.75rem; opacity: .55; fill: none; stroke: rgba(183,131,85,.9); stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+.seat-text { flex: 1 1 auto; min-width: 0; }
+.seat-text h3 { margin: 0 0 .4rem; font-size: 1.15rem; color: #1c231e; }
+.season-note { font-size: .72em; font-weight: 400; }
+.seat-text p { margin: 0; color: rgba(44,53,45,.7); font-size: .95rem; line-height: 1.5; }
+.seat-text a { display: inline-block; margin-top: .5rem; font-weight: 600; color: #4a607a; }
+.table-overview .offer-group-title { margin: 1rem 0 0; padding-top: .75rem; border-top: 1px solid rgba(183,131,85,.4); color: #1c231e; font-size: 1.5rem; }
+.family-group-heading { grid-area: family-heading; margin-top: 1rem; }
+.family-group-heading .offer-group-title { margin: 0; }
+.family-group-subtitle { margin: .35rem 0 0; color: rgba(44,53,45,.7); font-size: .95rem; line-height: 1.5; }
+.community-group-heading { grid-area: community-heading; margin-top: 1rem; }
+.community-group-heading .offer-group-title { margin: 0; }
+.community-group-subtitle { margin: .35rem 0 0; color: rgba(44,53,45,.7); font-size: .95rem; line-height: 1.5; }
+.seat-top { grid-area: seat-top; }
+.seat-right { grid-area: seat-right; }
+.seat-bottom { grid-area: seat-bottom; }
+.seat-left { grid-area: seat-left; }
+.seat-huettenzeit { grid-area: seat-huettenzeit; }
+.seat-montagskicker { grid-area: seat-montagskicker; }
+.seat-plattenabend { grid-area: seat-plattenabend; }
+
 /* ---------- Layout ---------- */
 .site-header-inner { gap: 1.5rem; }
 .site-nav { display: flex; align-items: center; gap: 2rem; }
