@@ -174,6 +174,53 @@ img { max-width: 100%; display: block; }
     .workbench-subtitle { font-size: 1.5rem; }
 }
 .article-image { display: block; width: 100%; max-height: 28rem; object-fit: cover; border-radius: 1rem; margin-bottom: 1.5rem; }
+.article-list-featured, .article-list-horizontal { display: grid; grid-template-columns: minmax(0, 1fr); gap: 0; padding: 0; overflow: hidden; }
+.article-list-featured { border-color: rgba(74,96,122,.45); }
+.article-list-image { aspect-ratio: 16 / 9; overflow: hidden; background: #e8ede8; }
+.article-list-image-compact { max-width: 36rem; margin: 0 auto 1.5rem; }
+.article-list-image .article-image { width: 100%; height: 100%; min-height: 0; max-height: none; margin: 0; border-radius: 0; object-fit: contain; }
+.article-list-copy { align-self: center; padding: 1.5rem; }
+.article-list-copy h2, .article-list-copy h3 { margin: 0 0 .85rem; line-height: 1.2; }
+.article-list-copy > p:not(.article-list-label) { margin: 0; color: rgba(44,53,45,.76); line-height: 1.65; }
+.article-list-label, .article-callout-label { margin: 0 0 .65rem; color: #4a607a; font-size: .72rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+.article-list-link { display: inline-flex; align-items: center; gap: .55rem; margin-top: 1.25rem; color: #4a607a; font-size: .9rem; font-weight: 700; }
+.article-list-link span { transition: transform .2s ease; }
+.article-list-link:hover span { transform: translateX(.2rem); }
+.article-detail { max-width: 66rem; }
+.article-detail-title { max-width: 58rem; margin: .75rem 0 1rem; color: #1c231e; font-size: 2.5rem; line-height: 1.12; }
+.article-detail-lead { max-width: 52rem; margin: 0 0 2rem; color: #4a607a; font-family: 'Playfair Display',serif; font-size: 1.35rem; line-height: 1.5; }
+.article-detail-image { max-height: 32rem; margin-bottom: 3rem; }
+.article-copy { max-width: 52rem; margin: 0 auto; color: rgba(44,53,45,.88); font-size: 1.03rem; line-height: 1.8; }
+.article-detail-compact > .article-detail-image { display: block; width: 100%; height: auto; max-width: 58rem; max-height: none; margin: 0 auto 2.5rem; object-fit: contain; }
+.article-detail-compact .article-copy-compact { max-width: 48rem; font-size: .94rem; line-height: 1.7; }
+.article-detail-compact .article-copy-compact h2 { font-size: 1.5rem; }
+.article-detail-compact .article-copy-compact .article-pullquote { font-size: 1.45rem; }
+.article-detail-compact .article-copy-compact .article-pullquote-final { font-size: 1.55rem; }
+.article-copy h2 { margin: 2.8rem 0 .85rem; color: #1c231e; font-size: 1.65rem; line-height: 1.25; }
+.article-copy h2:first-child { margin-top: 0; }
+.article-copy p { margin: 0 0 1.2rem; }
+.article-callout, .article-question { margin: 2.25rem 0; padding: 1.5rem 1.65rem; border: 1px solid rgba(28,35,30,.12); border-left: 4px solid #b78355; background: #efe8dc; }
+.article-callout p:last-child, .article-question p:last-child { margin-bottom: 0; }
+.article-callout-green { border-left-color: #3b533f; background: #e8ede8; }
+.article-question { border-left-color: #4a607a; background: #e8edf0; }
+.article-pullquote { margin: 2.75rem auto; padding: 1rem 1.5rem; border-left: 3px solid #b78355; color: #1c231e; font-family: 'Playfair Display',serif; font-size: 1.6rem; line-height: 1.45; text-align: center; }
+.article-pullquote-final { max-width: 48rem; margin-top: 3.25rem; padding: 1.5rem; border: 1px solid rgba(59,83,63,.3); border-left: 4px solid #3b533f; background: #e8ede8; font-size: 1.75rem; }
+@media (min-width: 768px) {
+    .article-list-featured, .article-list-horizontal { grid-template-columns: minmax(0, .95fr) minmax(0, 1.05fr); }
+    .article-list-copy { padding: 2.25rem; }
+    .article-detail-title { font-size: 3.25rem; }
+}
+@media (max-width: 480px) {
+    .article-detail-title { font-size: 2.1rem; }
+    .article-detail-lead { font-size: 1.18rem; }
+    .article-detail-compact .article-copy-compact { font-size: .9rem; }
+    .article-detail-compact .article-copy-compact h2 { font-size: 1.35rem; }
+    .article-detail-compact .article-copy-compact .article-pullquote { font-size: 1.25rem; }
+    .article-detail-compact .article-copy-compact .article-pullquote-final { font-size: 1.35rem; }
+    .article-callout, .article-question { padding: 1.15rem; }
+    .article-pullquote { padding-inline: .75rem; font-size: 1.35rem; }
+    .article-pullquote-final { font-size: 1.45rem; }
+}
 .content-band { padding: 5rem 1.5rem; border-top: 1px solid #e5ddd3; }
 .content-inner { max-width: 72rem; margin: 0 auto; }
 .pillar-grid, .offer-grid, .material-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem; }
