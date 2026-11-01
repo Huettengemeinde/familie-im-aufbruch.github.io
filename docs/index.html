@@ -1,15 +1,108 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="de" class="scroll-smooth">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Familie im Aufbruch</title>
-	<link rel="stylesheet" href="main.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Startseite – Familie im Aufbruch</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
 </head>
-<body>
-	<main>
-		<h1>Familie im Aufbruch</h1>
-		<p>Coming soon...</p>
-	</main>
+<body class="custom-bg text-earth-800 antialiased min-h-screen">
+
+    <!-- Navigation -->
+    <header class="site-header fixed top-0 left-0 right-0 z-50 bg-[#fcfbfa]/90 backdrop-blur-md border-b border-earth-200">
+        <div class="site-header-inner max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="index.html" class="text-xl font-bold tracking-tight text-earth-900 serif">Familie im Aufbruch</a>
+            <nav class="site-nav text-sm font-medium text-earth-800" aria-label="Hauptnavigation">
+                <a href="index.html">Startseite</a>
+                <details class="nav-dropdown">
+                    <summary>Dabei sein</summary>
+                    <div class="nav-menu">
+                        <a href="dabei-sein/der-tisch.html">Der Tisch</a>
+                        <a href="feld.html">Das Feld</a>
+                    </div>
+                </details>
+                <a href="ideen-und-material/index.html">Artikel</a>
+                <a href="ideen-und-material/werkzeuge.html">Werkzeuge</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO BEREICH MIT KARTEN-BILDERN -->
+    <section class="relative min-h-screen flex items-center justify-center pt-24 pb-16 px-6 overflow-hidden">
+        <div class="max-w-4xl mx-auto text-center relative z-10 space-y-8">
+            <h1 class="text-5xl md:text-7xl font-bold tracking-tight text-earth-900 leading-[1.1]">Familie im Aufbruch</h1>
+            <p class="home-vision text-lg md:text-2xl text-nature-green font-light serif">Gottes ursprüngliches Design wiederentdecken und als Familienteam vorangehen.</p>
+
+            <div class="grid md:grid-cols-2 gap-6 pt-6 max-w-3xl mx-auto">
+                <!-- Werkstatt Karte mit Bild -->
+                <a href="dabei-sein/der-tisch.html" class="group relative bg-white/95 backdrop-blur-sm rounded-2xl overflow-hidden shadow-sm border border-earth-200 hover:border-workshop-blue hover:shadow-md transition-all text-left flex flex-col justify-between">
+                    <div class="h-44 w-full overflow-hidden">
+                        <img src="img/Der Tisch.jpg" alt="Der Tisch: gemeinsames Gespräch und Jüngerschaft" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h2 class="text-2xl font-bold text-earth-900 mb-4 group-hover:text-workshop-blue transition">Der Tisch</h2>
+                        <ul class="home-card-list text-earth-800/70 text-sm leading-relaxed space-y-2 list-inside">
+                            <li>Gottes ursprünglichen Plan für Familie wiederentdecken.</li>
+                            <li>Familie als Team mit einem Auftrag in dieser Welt leben.</li>
+                            <li>Visionäre Väter unterstützen, ihre Familienteams zu leiten.</li>
+                            <li>Nachfolge und Jüngerschaft in Gemeinschaft leben.</li>
+                        </ul>
+                    </div>
+                    <div class="px-6 pb-6 flex items-center text-sm font-semibold text-workshop-blue">Mehr erfahren <span class="ml-2 group-hover:translate-x-1 transition">→</span></div>
+                </a>
+
+                <!-- Feld Karte mit Bild -->
+                <a href="feld.html" class="group relative bg-white/95 backdrop-blur-sm rounded-2xl overflow-hidden shadow-sm border border-earth-200 hover:border-nature-green hover:shadow-md transition-all text-left flex flex-col justify-between">
+                    <div class="h-44 w-full overflow-hidden">
+                        <img src="img/Das Feld.jpg" alt="Das Feld" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h2 class="text-2xl font-bold text-earth-900 mb-2 group-hover:text-nature-green transition">Das Feld</h2>
+                        <p class="text-earth-800/70 text-sm leading-relaxed">Gottes Schöpfungsauftrag praktisch leben. Gottes Versorgung und Segen erleben und weitergeben.</p>
+                    </div>
+                    <div class="px-6 pb-6 flex items-center text-sm font-semibold text-nature-green">Mehr erfahren <span class="ml-2 group-hover:translate-x-1 transition">→</span></div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- UNSERE GESCHICHTE -->
+    <section id="geschichte" class="py-24 bg-white/80 backdrop-blur-sm px-6 border-t border-earth-200">
+        <div class="max-w-5xl mx-auto space-y-12">
+            <div class="text-center space-y-4">
+                <h2 class="text-3xl md:text-4xl font-bold text-earth-900">Unsere Geschichte</h2>
+                <div class="w-12 h-0.5 bg-nature-green mx-auto"></div>
+            </div>
+            
+            <div class="max-w-3xl mx-auto">
+                <div class="prose prose-lg text-earth-800/80 font-light space-y-6 leading-relaxed">
+                    <p>„Familie im Aufbruch“ ist entstanden, weil wir davon ausgehen, dass Gott Familie für weit mehr geschaffen hat als nur dafür, Sprungbrett für den individuellen Erfolg jedes Einzelnen zu sein.</p>
+                    <p>Gottes Herz schlägt aus unserer Sicht dafür, Familie als Team zu leben und nach außen hin aktiv zu werden.</p>
+                    <p>Wir wollen gemeinsam mit anderen Familien Gottes Design von Familie wiederentdecken und uns dabei gegenseitig unterstützen, Familie als Team im Alltag zu leben.</p>
+                    <p>Der Tisch und das Feld gehören dabei untrennbar zusammen:<br>Der Tisch ist der Ort, an dem Jüngerschaft und Nachfolge als Familienteam gelebt wird.<br>Das Feld ist der Ort, an dem wir selbst schöpferisch tätig werden und Gottes Segen praktisch erleben und weitergeben.</p>
+                    <p>Wir wollen Gottes Auftrag ganzheitlich leben – von den Händen bis zum Herz – und Familien ermutigen, gemeinsam Neues zu wagen.</p>
+                    <p class="text-xl md:text-2xl font-semibold text-earth-900 leading-snug">Wir wollen Räume schaffen, in denen Leben in Freiheit möglich wird.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="kontakt" class="bg-earth-900 text-earth-100 py-16 px-6">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 mb-12">
+            <div class="space-y-4">
+                <h3 class="text-2xl font-bold serif text-white">Familie im Aufbruch</h3>
+                <p class="text-earth-300 font-light text-sm max-w-sm">Gottes ursprüngliches Design wiederentdecken und als Familienteam vorangehen.</p>
+            </div>
+            <div class="space-y-4">
+                <h4 class="text-lg font-semibold text-white">Kontakt</h4>
+                <p class="text-earth-300 text-sm font-light">Schreib uns einfach eine kurze Nachricht:</p>
+                <a href="mailto:manu.schick@gmx.de" class="inline-block bg-nature-green text-white px-6 py-2.5 rounded-full text-sm font-semibold hover:bg-opacity-90 transition">Nachricht schreiben</a>
+            </div>
+        </div>
+    </footer>
+
 </body>
 </html>
