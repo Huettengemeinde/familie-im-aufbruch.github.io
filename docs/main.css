@@ -112,7 +112,8 @@ img { max-width: 100%; display: block; }
 .story-page .story-hero-content { display: flex; flex-direction: column; align-items: flex-start; gap: 1.25rem; }
 .story-page .workbench-lead { margin-top: 1rem; }
 .story-page .story-2027-intro { max-width: 62rem; padding: 2rem 0 2.5rem; }
-.story-page .story-2027-copy { max-width: 54rem; margin: 0; line-height: 1.65; }
+.story-page .story-2027-lead { width: 100%; padding-left: 0; border-left: 0; text-align: center; }
+.story-page .story-2027-copy { max-width: 54rem; margin: 0 auto; line-height: 1.65; text-align: center; }
 .story-page .story-program { padding: 2rem 0 2.5rem; border-bottom: 1px solid rgba(28,35,30,.15); }
 .story-page .story-process-track { margin-bottom: 1.5rem; }
 .story-page .story-topic-grid { gap: 1rem; }
@@ -177,7 +178,7 @@ img { max-width: 100%; display: block; }
 .article-list-featured, .article-list-horizontal { display: grid; grid-template-columns: minmax(0, 1fr); gap: 0; padding: 0; overflow: hidden; }
 .article-list-featured { border-color: rgba(74,96,122,.45); }
 .article-list-image { aspect-ratio: 16 / 9; overflow: hidden; background: #e8ede8; }
-.article-list-image-compact { max-width: 36rem; margin: 0 auto 1.5rem; }
+.article-list-image-compact { width: 100%; max-width: 36rem; min-width: 0; margin: 0 auto 1.5rem; }
 .article-list-image .article-image { width: 100%; height: 100%; min-height: 0; max-height: none; margin: 0; border-radius: 0; object-fit: contain; }
 .article-list-copy { align-self: center; padding: 1.5rem; }
 .article-list-copy h2, .article-list-copy h3 { margin: 0 0 .85rem; line-height: 1.2; }
