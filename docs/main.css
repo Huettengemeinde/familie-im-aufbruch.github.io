@@ -200,6 +200,9 @@ img { max-width: 100%; display: block; }
 .article-copy h2 { margin: 2.8rem 0 .85rem; color: #1c231e; font-size: 1.65rem; line-height: 1.25; }
 .article-copy h2:first-child { margin-top: 0; }
 .article-copy p { margin: 0 0 1.2rem; }
+.article-detail-compact .article-copy-compact .article-note { margin-top: 2rem; font-size: .82rem; font-style: italic; }
+.article-detail-compact .article-copy-compact .article-note h2 { margin: 0 0 .65rem; font-size: .95rem; font-style: italic; }
+.article-detail-compact .article-copy-compact .article-note p:last-child { margin-bottom: 0; }
 .article-callout, .article-question { margin: 2.25rem 0; padding: 1.5rem 1.65rem; border: 1px solid rgba(28,35,30,.12); border-left: 4px solid #b78355; background: #efe8dc; }
 .article-callout p:last-child, .article-question p:last-child { margin-bottom: 0; }
 .article-callout-green { border-left-color: #3b533f; background: #e8ede8; }
