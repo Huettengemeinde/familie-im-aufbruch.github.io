@@ -4,7 +4,7 @@ Dieses Repository enthält die Webseite für Familie im Aufbruch, erreichbar unt
 
 ## Erste Schritte (Windows)
 
-Diese Anleitung richtet sich an neue Mitwirkende unter Windows und führt von der Installation bis zum ersten Pull Request.
+Diese Anleitung richtet sich an neue Mitwirkende unter Windows und führt von der Installation bis zur Veröffentlichung von Änderungen.
 
 ### Was ist Git und wozu wird es gebraucht?
 
@@ -21,7 +21,6 @@ Die gute Nachricht: Man muss dafür keine Git-Befehle auswendig lernen oder in e
 
 In VS Code über die Extensions-Ansicht (`Strg+Shift+X`) installieren:
 
-- **GitHub Pull Requests** (`GitHub.vscode-pull-request-github`) – zum Erstellen und Verwalten von Pull Requests direkt in VS Code, ohne zusätzliche Software wie GitHub Desktop.
 - **Git Graph** (`mhutchie.git-graph`) – visualisiert die Commit-Historie und Branches.
 - **Material Icon Theme** (`PKief.material-icon-theme`) – übersichtliche Datei-Icons im Explorer.
 - **GitHub Copilot** (`GitHub.copilot`) und **GitHub Copilot Chat** (`GitHub.copilot-chat`) – KI-Unterstützung beim Programmieren, falls noch nicht vorhanden.
@@ -43,18 +42,15 @@ In VS Code über die Extensions-Ansicht (`Strg+Shift+X`) installieren:
 Im Chat-Fenster gibt es neben der Modell-Auswahl noch eine Dropdown-Auswahl für den **Modus**:
 
 - **Ask**: Copilot beantwortet nur Fragen und macht Vorschläge, ändert aber keine Dateien selbstständig. Änderungen müssen manuell übernommen werden – gut geeignet, um sich z. B. nur etwas erklären zu lassen, ohne dass gleich etwas verändert wird.
-- **Agent**: Copilot darf selbstständig Dateien bearbeiten, Befehle ausführen und mehrere Schritte hintereinander erledigen (z. B. Branch erstellen, Änderungen vornehmen, committen, pushen, Pull Request erstellen), ohne jeden Einzelschritt manuell bestätigen zu müssen.
+- **Agent**: Copilot darf selbstständig Dateien bearbeiten, Befehle ausführen und mehrere Schritte hintereinander erledigen (z. B. Branch erstellen, Änderungen vornehmen, committen, mergen und pushen), ohne jeden Einzelschritt manuell bestätigen zu müssen.
 
 Der Agent-Modus ist **nicht** automatisch immer aktiv – je nachdem, was zuletzt eingestellt war, kann auch Ask aktiv sein. **Wichtig:** Vor jeder Anfrage in der Dropdown-Auswahl prüfen, dass **Agent** ausgewählt ist. Nur im Agent-Modus kann Copilot die in dieser Anleitung beschriebenen Aufgaben selbstständig erledigen; im Ask-Modus würde Copilot nur Vorschläge machen, ohne sie umzusetzen.
 
 ### 6. Das richtige KI-Modell auswählen
 
-Im Chat-Fenster gibt es oben bzw. unten im Eingabefeld eine Dropdown-Auswahl für das **Modell**. Dort stehen unter anderem verschiedene Claude-Modelle zur Verfügung:
+Im Chat-Fenster gibt es oben bzw. unten im Eingabefeld eine Dropdown-Auswahl für das **Modell**. Wähle dort immer **GPT-6 Luna High** mit einem **272K-Kontextfenster** aus.
 
-- **Claude Haiku**: schnell und sparsam im Verbrauch, gut geeignet für einfache, klar umrissene Aufgaben wie kleine Textänderungen, kurze Fragen oder simple Korrekturen.
-- **Claude Sonnet**: etwas langsamer, dafür deutlich gründlicher und besser im Verstehen komplexerer Zusammenhänge – die richtige Wahl bei größeren Änderungen, mehreren betroffenen Dateien oder wenn Copilot selbstständig mehrere Schritte (z. B. Branch erstellen, Änderungen machen, committen, pushen, Pull Request erstellen) hintereinander ausführen soll.
-
-**Faustregel:** Im Zweifel **Claude Sonnet** auswählen – es liefert die zuverlässigeren Ergebnisse. Nur bei ganz kleinen, schnellen Anliegen (z. B. "Was bedeutet dieser Begriff?") lohnt sich der Wechsel zu Claude Haiku.
+Prüfe vor jeder Anfrage, dass dieses Modell ausgewählt ist.
 
 ### 7. Repository klonen
 
@@ -107,29 +103,21 @@ Bevor Änderungen vorgenommen werden, sollte immer ein eigener Branch angelegt w
 3. Auf den Haken **"Commit"** klicken, um die Änderung lokal zu speichern.
 4. Anschließend auf **"Sync Changes"** bzw. **"Publish Branch"** klicken, um die Änderungen zu GitHub hochzuladen.
 
-> 💡 **Einfacher geht's mit Copilot:** Auch Commit und Push müssen nicht manuell angeklickt werden. Einfach in Copilot Chat schreiben: *"Committe meine Änderungen mit einer passenden Nachricht und lade sie hoch"* – Copilot formuliert die Commit-Nachricht und führt Commit sowie Push selbstständig aus.
+> 💡 **Einfacher geht's mit Copilot:** Auch Commit und Push des Feature-Branches müssen nicht manuell angeklickt werden. Einfach in Copilot Chat schreiben: *"Committe meine Änderungen mit einer passenden Nachricht und lade meinen Feature-Branch hoch"* – Copilot formuliert die Commit-Nachricht und führt Commit sowie Push selbstständig aus.
 
-### 13. Pull Request erstellen
+### 13. Änderungen veröffentlichen
 
-Ein Pull Request ist die Anfrage, die eigenen Änderungen in die eigentliche Webseite zu übernehmen:
-
-1. Extension **GitHub Pull Requests** verwenden: Symbol in der linken Seitenleiste öffnen.
-2. Auf **"Create Pull Request"** klicken.
-3. Titel und kurze Beschreibung eingeben, dann auf **"Create"** klicken.
-
-Jörg bekommt den Pull Request danach automatisch zur Prüfung und kümmert sich um die Veröffentlichung. Ein Login auf der GitHub-Webseite ist für diesen kompletten Ablauf nicht nötig – alles funktioniert direkt aus VS Code heraus.
-
-> 💡 **Einfacher geht's mit Copilot:** Auch den Pull Request muss man nicht über die Menüs erstellen. Einfach in Copilot Chat schreiben: *"Erstelle einen Pull Request für meine Änderungen"* – Copilot legt ihn inklusive Titel und Beschreibung an.
+Es werden keine Pull Requests erstellt. Wenn die Änderungen fertig sind und veröffentlicht werden sollen, bitte Copilot im Agent-Modus, den Feature-Branch direkt in `main` zu mergen und `main` zu GitHub zu pushen. Zum Beispiel: *"Veröffentliche meine Änderungen: Committe sie, merge meinen Feature-Branch in main und pushe main."*
 
 ### 14. Bei Fragen einfach Copilot Chat fragen
 
 Egal ob "Wie erstelle ich einen neuen Branch?", "Wie füge ich ein Bild ein?" oder "Warum funktioniert etwas nicht?" – GitHub Copilot Chat in VS Code kann jederzeit auf Deutsch gefragt werden und hilft direkt im Editor weiter.
 
-**Wichtig zu wissen:** Man muss sich keinen einzigen Git-Befehl merken oder wissen, in welchem Menü etwas zu finden ist. Branch erstellen, Commit, Push und Pull Request – **alle** diese Schritte aus dieser Anleitung kann man stattdessen einfach in normalen deutschen Sätzen von Copilot Chat erledigen lassen, z. B. *"Speichere meine Änderungen, lade sie hoch und erstelle einen Pull Request"* macht Copilot in einem Rutsch komplett selbstständig.
+**Wichtig zu wissen:** Man muss sich keinen einzigen Git-Befehl merken oder wissen, in welchem Menü etwas zu finden ist. Branch erstellen, Commit, Push und Veröffentlichung – **alle** diese Schritte aus dieser Anleitung kann man stattdessen einfach in normalen deutschen Sätzen von Copilot Chat erledigen lassen, z. B. *"Veröffentliche meine Änderungen"* weist Copilot an, den Feature-Branch in `main` zu mergen und `main` zu pushen.
 
 ### 15. Bereit für die nächste Änderung
 
-Sobald Jörg den Pull Request geprüft und übernommen ("gemerged") hat, ist die Änderung offiziell auf der Webseite. Für die nächste Änderung:
+Sobald Copilot den Feature-Branch in `main` gemerged und `main` gepusht hat, ist die Änderung offiziell auf der Webseite. Für die nächste Änderung:
 
 1. Unten links in der Statusleiste auf den aktuellen Branch-Namen klicken und zurück zu **"main"** wechseln.
 2. Auf **"Sync Changes"** klicken, damit der neueste Stand von GitHub geladen wird.
