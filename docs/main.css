@@ -51,7 +51,7 @@ img { max-width: 100%; display: block; }
 .table-overview .section-kicker { display: block; margin-bottom: .5rem; }
 .table-overview h2 { margin: 0 0 2.5rem; }
 
-.table-scene { position: relative; display: grid; grid-template-columns: 1fr; grid-template-areas: "table" "family-heading" "seat-bottom" "seat-left" "community-heading" "seat-top" "seat-huettenzeit" "seat-right" "seat-montagskicker" "seat-plattenabend"; gap: 1rem; align-items: center; text-align: left; }
+.table-scene { position: relative; display: grid; grid-template-columns: 1fr; grid-template-areas: "table" "family-heading" "seat-bottom" "seat-left" "seat-community"; gap: 1rem; align-items: center; text-align: left; }
 
 .table-shape { grid-area: table; position: relative; width: 100%; max-width: 360px; margin: 0 auto; opacity: .8; }
 .table-shape svg { width: 130%; max-width: none; height: auto; margin-left: -15%; display: block; }
@@ -72,16 +72,9 @@ img { max-width: 100%; display: block; }
 .family-group-heading { grid-area: family-heading; margin-top: 1rem; }
 .family-group-heading .offer-group-title { margin: 0; }
 .family-group-subtitle { margin: .35rem 0 0; color: rgba(44,53,45,.7); font-size: .95rem; line-height: 1.5; }
-.community-group-heading { grid-area: community-heading; margin-top: 3rem; }
-.community-group-heading .offer-group-title { margin: 0; }
-.community-group-subtitle { margin: .35rem 0 0; color: rgba(44,53,45,.7); font-size: .95rem; line-height: 1.5; }
-.seat-top { grid-area: seat-top; }
-.seat-right { grid-area: seat-right; }
 .seat-bottom { grid-area: seat-bottom; }
 .seat-left { grid-area: seat-left; }
-.seat-huettenzeit { grid-area: seat-huettenzeit; }
-.seat-montagskicker { grid-area: seat-montagskicker; }
-.seat-plattenabend { grid-area: seat-plattenabend; }
+.seat-community { grid-area: seat-community; }
 
 /* ---------- Layout ---------- */
 .site-header-inner { gap: 1.5rem; }
