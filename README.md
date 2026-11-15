@@ -8,9 +8,9 @@ Diese Anleitung richtet sich an neue Mitwirkende unter Windows und führt von de
 
 ### Was ist Git und wozu wird es gebraucht?
 
-**Git** ist ein Programm, das jede Änderung an den Dateien dieser Webseite nachvollziehbar speichert – vergleichbar mit einer sehr ausführlichen "Änderungshistorie" bzw. einem "Speicherstand" wie in einem Videospiel. Jede gespeicherte Änderung (ein sogenannter **Commit**) bleibt für immer erhalten, sodass man jederzeit sehen kann, wer was wann geändert hat, und notfalls auch zu einem älteren Stand zurückkehren kann. **GitHub** wiederum ist die Webseite, auf der eine Online-Kopie dieser Git-Historie liegt – dort tauschen sich Manuel und Jörg über den aktuellen Stand der Webseite aus.
+**Git** ist ein Programm, das jede Änderung an den Dateien dieser Webseite nachvollziehbar speichert – vergleichbar mit einer sehr ausführlichen "Änderungshistorie" bzw. einem "Speicherstand" wie in einem Videospiel. Jede gespeicherte Änderung (ein sogenannter **Commit**) bleibt für immer erhalten, sodass man jederzeit sehen kann, wer was wann geändert hat, und notfalls auch zu einem älteren Stand zurückkehren kann. **GitHub** wiederum ist die Webseite, auf der eine Online-Kopie dieser Git-Historie liegt.
 
-Die gute Nachricht: Man muss dafür keine Git-Befehle auswendig lernen oder in einer schwarzen Konsole eintippen. In dieser Anleitung passiert das alles über Buttons und Menüs in VS Code – und wie im nächsten Abschnitt beschrieben, kann sogar Copilot Chat diese Schritte auf Zuruf übernehmen.
+Die gute Nachricht: Man muss dafür keine Git-Befehle auswendig lernen oder in einer schwarzen Konsole eintippen. In dieser Anleitung passiert das alles über Buttons und Menüs in VS Code – und wie im nächsten Abschnitt beschrieben, kann sogar Codex diese Schritte auf Zuruf übernehmen.
 
 ### 1. Voraussetzungen installieren
 
@@ -23,32 +23,23 @@ In VS Code über die Extensions-Ansicht (`Strg+Shift+X`) installieren:
 
 - **Git Graph** (`mhutchie.git-graph`) – visualisiert die Commit-Historie und Branches.
 - **Material Icon Theme** (`PKief.material-icon-theme`) – übersichtliche Datei-Icons im Explorer.
-- **GitHub Copilot** (`GitHub.copilot`) und **GitHub Copilot Chat** (`GitHub.copilot-chat`) – KI-Unterstützung beim Programmieren, falls noch nicht vorhanden.
+- **Codex** (`openai.chatgpt`) – KI-Unterstützung beim Programmieren.
 
-### 3. Bei GitHub anmelden & Copilot Pro abonnieren
+### 3. Bei Codex anmelden
 
-- Falls noch kein GitHub-Account existiert: einen kostenlosen Account unter [github.com/join](https://github.com/join) anlegen.
-- In VS Code unten links auf das Account-Icon klicken und mit dem eigenen GitHub-Account anmelden.
-- Für die Nutzung von Copilot Chat wird ein **GitHub Copilot Pro** Abo (ca. 10 USD/Monat) benötigt, abschließbar unter [github.com/settings/copilot](https://github.com/settings/copilot).
+- Die Codex-Erweiterung öffnen und den Anweisungen zur Anmeldung mit dem eigenen OpenAI- bzw. ChatGPT-Konto folgen.
 
-### 4. Copilot Chat öffnen
+### 4. Codex öffnen
 
-- Das Chat-Fenster öffnet sich über das Copilot-Symbol oben rechts in der VS Code Titelleiste, über das Symbol in der linken Seitenleiste oder per Tastenkombination `Strg+Alt+I`.
-- Beim allerersten Öffnen erscheint eventuell eine Meldung, dass sich VS Code bei GitHub anmelden möchte ("Sign in with GitHub"). Auf **"Anmelden"** bzw. **"Allow"** klicken – es öffnet sich der Browser, in dem der Zugriff für VS Code bestätigt werden muss. Anschließend zurück zu VS Code wechseln, das Chat-Fenster ist danach einsatzbereit.
-- Ist man bereits wie in Schritt 3 beschrieben mit dem GitHub-Account angemeldet, öffnet sich der Chat direkt ohne weitere Anmeldung.
+- Das Codex-Fenster über das Codex-Symbol in der Seitenleiste öffnen. Falls das Symbol nicht sichtbar ist, die Befehlspalette mit `Strg+Shift+P` öffnen und **"Codex: Open Codex Sidebar"** ausführen.
 
-### 5. Chat-Modus: Agent oder Ask?
+### 5. Codex verwenden
 
-Im Chat-Fenster gibt es neben der Modell-Auswahl noch eine Dropdown-Auswahl für den **Modus**:
-
-- **Ask**: Copilot beantwortet nur Fragen und macht Vorschläge, ändert aber keine Dateien selbstständig. Änderungen müssen manuell übernommen werden – gut geeignet, um sich z. B. nur etwas erklären zu lassen, ohne dass gleich etwas verändert wird.
-- **Agent**: Copilot darf selbstständig Dateien bearbeiten, Befehle ausführen und mehrere Schritte hintereinander erledigen (z. B. Branch erstellen, Änderungen vornehmen, committen, mergen und pushen), ohne jeden Einzelschritt manuell bestätigen zu müssen.
-
-Der Agent-Modus ist **nicht** automatisch immer aktiv – je nachdem, was zuletzt eingestellt war, kann auch Ask aktiv sein. **Wichtig:** Vor jeder Anfrage in der Dropdown-Auswahl prüfen, dass **Agent** ausgewählt ist. Nur im Agent-Modus kann Copilot die in dieser Anleitung beschriebenen Aufgaben selbstständig erledigen; im Ask-Modus würde Copilot nur Vorschläge machen, ohne sie umzusetzen.
+Codex kann Fragen beantworten, Dateien bearbeiten und bei Git-Aufgaben helfen. Änderungen und angeforderte Befehle vor dem Bestätigen prüfen.
 
 ### 6. Das richtige KI-Modell auswählen
 
-Im Chat-Fenster gibt es oben bzw. unten im Eingabefeld eine Dropdown-Auswahl für das **Modell**. Wähle dort immer **GPT-6 Luna High** mit einem **272K-Kontextfenster** aus.
+Im Codex-Fenster gibt es eine Auswahl für das **Modell**. Wähle dort bevorzugt **GPT-6 Luna Medium** mit einem **272K-Kontextfenster** aus.
 
 Prüfe vor jeder Anfrage, dass dieses Modell ausgewählt ist.
 
@@ -67,7 +58,7 @@ Damit liegt die komplette Webseite jetzt als Kopie auf dem eigenen PC und kann i
 - **`docs/main.css`** – das gesamte Design (Farben, Schriften, Abstände). Styles gehören immer hierher, nie direkt in die HTML-Datei.
 - **`docs/img/`** – alle Bilder der Webseite.
 
-Auf JavaScript wird bewusst verzichtet, die Seite bleibt reines, statisches HTML. Wer mit GitHub Copilot Chat arbeitet, muss sich darum aber nicht selbst kümmern – einfach beschreiben, was geändert werden soll (z. B. *"Ändere die Überschrift auf der Startseite in ..."* oder *"Füge ein neues Bild im Abschnitt Über uns ein"*), Copilot hält sich automatisch an diese Regeln.
+Auf JavaScript wird bewusst verzichtet, die Seite bleibt reines, statisches HTML. Wer mit Codex arbeitet, muss sich darum aber nicht selbst kümmern – einfach beschreiben, was geändert werden soll (z. B. *"Ändere die Überschrift auf der Startseite in ..."* oder *"Füge ein neues Bild im Abschnitt Über uns ein"*), Codex hält sich automatisch an diese Regeln.
 
 ### 9. Lokale Vorschau der Webseite ansehen
 
@@ -88,13 +79,13 @@ Bevor Änderungen vorgenommen werden, sollte immer ein eigener Branch angelegt w
 2. **"Create new branch..."** auswählen.
 3. Einen kurzen, beschreibenden Namen eingeben, z. B. `manuel/neuer-text-startseite`.
 
-> 💡 **Einfacher geht's mit Copilot:** Diesen Schritt muss man nicht selbst über die Menüs klicken. Es reicht, Copilot Chat zu schreiben: *"Erstelle einen neuen Branch für meine Änderung an der Startseite"* – Copilot führt den nötigen Git-Befehl automatisch im Hintergrund aus.
+> 💡 **Einfacher geht's mit Codex:** Diesen Schritt muss man nicht selbst über die Menüs klicken. Es reicht, Codex zu schreiben: *"Erstelle einen neuen Branch für meine Änderung an der Startseite"* – Codex führt den nötigen Git-Befehl aus.
 
 ### 11. Änderungen vornehmen
 
-Änderungen können direkt selbst im Editor gemacht werden, oder man lässt sich von **GitHub Copilot Chat** helfen: Chat öffnen (wie in Schritt 4 beschrieben, im **Agent-Modus** aus Schritt 5), beschreiben was geändert werden soll, und die Änderungen von Copilot direkt in den Dateien übernehmen lassen. Mit der Live-Vorschau aus Schritt 9 lässt sich das Ergebnis sofort kontrollieren.
+Änderungen können direkt selbst im Editor gemacht werden, oder man lässt sich von **Codex** helfen: Codex öffnen (wie in Schritt 4 beschrieben), beschreiben was geändert werden soll, und die vorgeschlagenen Änderungen prüfen und übernehmen. Mit der Live-Vorschau aus Schritt 9 lässt sich das Ergebnis sofort kontrollieren.
 
-**Nicht vergessen:** Geänderte Dateien vor dem nächsten Schritt speichern (`Strg+S`). Ein kleiner Punkt statt eines Kreuzes im Tab-Reiter oben zeigt an, dass eine Datei noch ungespeichert ist. Wenn Copilot die Änderungen vornimmt, speichert es normalerweise automatisch mit ab.
+**Nicht vergessen:** Geänderte Dateien vor dem nächsten Schritt speichern (`Strg+S`). Ein kleiner Punkt statt eines Kreuzes im Tab-Reiter oben zeigt an, dass eine Datei noch ungespeichert ist. Wenn Codex die Änderungen vornimmt, speichert es normalerweise automatisch mit ab.
 
 ### 12. Änderungen speichern (Commit) und hochladen (Push)
 
@@ -103,25 +94,25 @@ Bevor Änderungen vorgenommen werden, sollte immer ein eigener Branch angelegt w
 3. Auf den Haken **"Commit"** klicken, um die Änderung lokal zu speichern.
 4. Anschließend auf **"Sync Changes"** bzw. **"Publish Branch"** klicken, um die Änderungen zu GitHub hochzuladen.
 
-> 💡 **Einfacher geht's mit Copilot:** Auch Commit und Push des Feature-Branches müssen nicht manuell angeklickt werden. Einfach in Copilot Chat schreiben: *"Committe meine Änderungen mit einer passenden Nachricht und lade meinen Feature-Branch hoch"* – Copilot formuliert die Commit-Nachricht und führt Commit sowie Push selbstständig aus.
+> 💡 **Einfacher geht's mit Codex:** Auch Commit und Push des Feature-Branches müssen nicht manuell angeklickt werden. Einfach Codex schreiben: *"Committe meine Änderungen mit einer passenden Nachricht und lade meinen Feature-Branch hoch"* – Codex formuliert die Commit-Nachricht und führt Commit sowie Push aus.
 
 ### 13. Änderungen veröffentlichen
 
-Es werden keine Pull Requests erstellt. Wenn die Änderungen fertig sind und veröffentlicht werden sollen, bitte Copilot im Agent-Modus, den Feature-Branch direkt in `main` zu mergen und `main` zu GitHub zu pushen. Zum Beispiel: *"Veröffentliche meine Änderungen: Committe sie, merge meinen Feature-Branch in main und pushe main."*
+Es werden keine Pull Requests erstellt. Wenn die Änderungen fertig sind und veröffentlicht werden sollen, bitte Codex, den Feature-Branch direkt in `main` zu mergen und `main` zu GitHub zu pushen. Zum Beispiel: *"Veröffentliche meine Änderungen: Committe sie, merge meinen Feature-Branch in main und pushe main."*
 
-### 14. Bei Fragen einfach Copilot Chat fragen
+### 14. Bei Fragen einfach Codex fragen
 
-Egal ob "Wie erstelle ich einen neuen Branch?", "Wie füge ich ein Bild ein?" oder "Warum funktioniert etwas nicht?" – GitHub Copilot Chat in VS Code kann jederzeit auf Deutsch gefragt werden und hilft direkt im Editor weiter.
+Egal ob "Wie erstelle ich einen neuen Branch?", "Wie füge ich ein Bild ein?" oder "Warum funktioniert etwas nicht?" – Codex in VS Code kann jederzeit auf Deutsch gefragt werden und hilft direkt im Editor weiter.
 
-**Wichtig zu wissen:** Man muss sich keinen einzigen Git-Befehl merken oder wissen, in welchem Menü etwas zu finden ist. Branch erstellen, Commit, Push und Veröffentlichung – **alle** diese Schritte aus dieser Anleitung kann man stattdessen einfach in normalen deutschen Sätzen von Copilot Chat erledigen lassen, z. B. *"Veröffentliche meine Änderungen"* weist Copilot an, den Feature-Branch in `main` zu mergen und `main` zu pushen.
+**Wichtig zu wissen:** Man muss sich keinen einzigen Git-Befehl merken oder wissen, in welchem Menü etwas zu finden ist. Branch erstellen, Commit, Push und Veröffentlichung – **alle** diese Schritte aus dieser Anleitung kann man stattdessen einfach in normalen deutschen Sätzen von Codex erledigen lassen, z. B. *"Veröffentliche meine Änderungen"* weist Codex an, den Feature-Branch in `main` zu mergen und `main` zu pushen.
 
 ### 15. Bereit für die nächste Änderung
 
-Sobald Copilot den Feature-Branch in `main` gemerged und `main` gepusht hat, ist die Änderung offiziell auf der Webseite. Für die nächste Änderung:
+Sobald Codex den Feature-Branch in `main` gemerged und `main` gepusht hat, ist die Änderung offiziell auf der Webseite. Für die nächste Änderung:
 
 1. Unten links in der Statusleiste auf den aktuellen Branch-Namen klicken und zurück zu **"main"** wechseln.
 2. Auf **"Sync Changes"** klicken, damit der neueste Stand von GitHub geladen wird.
 3. Wieder bei Schritt 10 (neuen Branch erstellen) starten.
 
-Auch das lässt sich komplett Copilot überlassen: einfach schreiben *"Wechsle zurück zu main, hole den neuesten Stand und erstelle einen neuen Branch für ..."*.
+Auch das lässt sich komplett Codex überlassen: einfach schreiben *"Wechsle zurück zu main, hole den neuesten Stand und erstelle einen neuen Branch für ..."*.
 

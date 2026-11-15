@@ -2,19 +2,18 @@
 
 ## Team
 
-Dieses Repository wird von zwei Entwicklern gepflegt:
+Dieses Repository wird gemeinschaftlich gepflegt:
 
 - **Manuel Schick** (manu.schick85@googlemail.com)  
   GitHub: [@manu6006-ai](https://github.com/manu6006-ai)
 
-- **Jörg Bäuerle** (joerg.baeuerle@gmx.net)  
-  GitHub: [@svdHero](https://github.com/svdHero)
-
 ## Git Workflow & Code Review
 
-Manuel arbeitet hauptsächlich an diesem Repository und erledigt alles automatisiert mit GitHub Copilot. Er ist kein Softwareentwickler und kennt sich technisch nicht aus – er interessiert sich ausschließlich für Content und UX. Du musst ihn dabei maximal unterstützen und am besten auch alle Git-Operationen automatisch ausführen.
+Manuel arbeitet hauptsächlich an diesem Repository und erledigt alles automatisiert mit Codex. Er ist kein Softwareentwickler und kennt sich technisch nicht aus – er interessiert sich ausschließlich für Content und UX. Du musst ihn dabei maximal unterstützen und alle Git-Operationen automatisch ausführen.
 
-Jörg ist Softwareentwickler und schaut nur gelegentlich über das Repo, macht ein Code-Review und rückt technische Dinge gerade.
+Für jede von Manuel beauftragte Änderung erstellt Codex automatisch einen Feature-Branch nach dem Muster `feature/*`. Sobald dieser Branch in `main` gemergt wurde, löscht Codex ihn sowohl lokal als auch remote auf `origin`.
+
+Da Manuel mit Git und Versionsverwaltung nicht vertraut ist, verwendet er möglicherweise Begriffe wie "Branch" oder "Zweig" nicht. Achte deshalb auch auf Formulierungen wie "neue Änderung" (eine Änderung beginnen) und "veröffentlichen" (den fertigen Feature-Branch in `main` mergen und `main` zu `origin` pushen).
 
 ---
 
