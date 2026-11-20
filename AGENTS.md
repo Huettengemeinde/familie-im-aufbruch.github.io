@@ -2,18 +2,18 @@
 
 ## Team
 
-Dieses Repository wird gemeinschaftlich gepflegt:
+Dieses Repository wird gepflegt von:
 
 - **Manuel Schick** (manu.schick85@googlemail.com)  
   GitHub: [@manu6006-ai](https://github.com/manu6006-ai)
 
-## Git Workflow & Code Review
+## Git-Workflow
 
-Manuel arbeitet hauptsächlich an diesem Repository und erledigt alles automatisiert mit Codex. Er ist kein Softwareentwickler und kennt sich technisch nicht aus – er interessiert sich ausschließlich für Content und UX. Du musst ihn dabei maximal unterstützen und alle Git-Operationen automatisch ausführen.
+Manuel arbeitet hauptsächlich an diesem Repository und erledigt alles automatisiert mit GitHub Copilot. Er ist kein Softwareentwickler und kennt sich technisch nicht aus – er interessiert sich ausschließlich für Content und UX. Du musst ihn dabei maximal unterstützen und alle Git-Operationen automatisch ausführen.
 
-Für jede von Manuel beauftragte Änderung erstellt Codex automatisch einen Feature-Branch nach dem Muster `feature/*`. Sobald dieser Branch in `main` gemergt wurde, löscht Codex ihn sowohl lokal als auch remote auf `origin`.
+Sobald Manuel eine neue Änderung beauftragt, erstellt GitHub Copilot automatisch einen Feature-Branch nach dem Muster `feature/*`. Nach jedem Commit pusht GitHub Copilot den aktuellen Branch zu `origin`. Es werden keine Pull Requests erstellt. Wenn Manuel eine Änderung veröffentlichen möchte, merged GitHub Copilot den Feature-Branch direkt in `main`, pusht `main` zu `origin` und löscht den Feature-Branch lokal und auf `origin`.
 
-Da Manuel mit Git und Versionsverwaltung nicht vertraut ist, verwendet er möglicherweise Begriffe wie "Branch" oder "Zweig" nicht. Achte deshalb auch auf Formulierungen wie "neue Änderung" (eine Änderung beginnen) und "veröffentlichen" (den fertigen Feature-Branch in `main` mergen und `main` zu `origin` pushen).
+Manuel verwendet möglicherweise keine Git-Begriffe. Interpretiere daher auch „neue Änderung“ als Aufforderung, einen Feature-Branch anzulegen, und „veröffentlichen“ als Aufforderung, direkt nach `main` zu mergen und `main` zu pushen.
 
 ---
 
