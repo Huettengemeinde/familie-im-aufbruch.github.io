@@ -24,6 +24,33 @@ img { max-width: 100%; display: block; }
 .custom-bg { background: linear-gradient(to bottom, #fcfbfa 0%, #f7f4ef 50%, #f0ece5 100%); }
 .bg-paper { background: #f3efe7; }
 
+.vision-section { position: relative; }
+.vision-content { max-width: 64rem; }
+.vision-heading { margin-bottom: 3rem; text-align: center; }
+.vision-heading h2 { margin: 0; }
+.vision-heading > div { margin-top: 1rem; }
+.vision-intro { max-width: 52rem; margin: 0 auto; font-size: 1.1rem; line-height: 1.8; text-align: center; }
+.vision-intro p { margin: 0; }
+.vision-intro p + p { margin-top: 1.1rem; }
+.vision-bridge { max-width: 52rem; margin: 3.25rem auto 1.25rem; color: #1c231e; font-family: 'Playfair Display', serif; font-size: 1.3rem; line-height: 1.5; text-align: center; }
+.vision-pillars { display: grid; grid-template-columns: minmax(0, 1fr); max-width: 60rem; margin: 0 auto; border-top: 1px solid rgba(28,35,30,.16); }
+.vision-pillar { padding: 1.75rem .25rem; }
+.vision-pillar + .vision-pillar { border-top: 1px solid rgba(28,35,30,.16); }
+.vision-pillar h3 { display: flex; align-items: center; gap: .75rem; margin: 0 0 .8rem; color: #1c231e; font-size: 1.55rem; }
+.vision-pillar h3::before { width: 1.5rem; height: 2px; background: #b78355; content: ''; }
+.vision-pillar-field h3::before { background: #3b533f; }
+.vision-pillar p { max-width: 34rem; margin: 0; color: rgba(44,53,45,.8); font-size: 1rem; line-height: 1.75; }
+.vision-outro { max-width: 52rem; margin: 2rem auto 0; padding: 1.75rem .25rem 0; border-top: 1px solid rgba(28,35,30,.16); color: #1c231e; font-family: 'Playfair Display', serif; font-size: 1.45rem; font-weight: 700; line-height: 1.55; text-align: center; }
+
+@media (min-width: 768px) {
+    .vision-heading { margin-bottom: 3.5rem; }
+    .vision-bridge { margin-top: 4rem; margin-bottom: 1.5rem; font-size: 1.45rem; }
+    .vision-pillars { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .vision-pillar { padding: 2rem 2.25rem; }
+    .vision-pillar + .vision-pillar { border-top: 0; border-left: 1px solid rgba(28,35,30,.16); }
+    .vision-outro { margin-top: 2.5rem; padding-top: 2rem; font-size: 1.65rem; }
+}
+
 /* ---------- Werkstatt: individuelle Gestaltungselemente ---------- */
 :root { --ink:#1c231e; --paper:#f7f3eb; --paper-2:#efe8dc; --blue:#4a607a; --warm:#b78355; }
 .paper-grain {
@@ -200,6 +227,9 @@ img { max-width: 100%; display: block; }
 .article-callout p:last-child, .article-question p:last-child { margin-bottom: 0; }
 .article-callout-green { border-left-color: #3b533f; background: #e8ede8; }
 .article-question { border-left-color: #4a607a; background: #e8edf0; }
+.article-subscribe { max-width: 28rem; margin: 4rem auto 2.25rem; border-left-color: #3b533f; background: #e8ede8; text-align: center; }
+.article-subscribe > p { margin: 1rem 0 0; color: #1c231e; }
+.article-subscribe > a { text-decoration: none; }
 .article-pullquote { margin: 2.75rem auto; padding: 1rem 1.5rem; border-left: 3px solid #b78355; color: #1c231e; font-family: 'Playfair Display',serif; font-size: 1.6rem; line-height: 1.45; text-align: center; }
 .article-pullquote-final { max-width: 48rem; margin-top: 3.25rem; padding: 1.5rem; border: 1px solid rgba(59,83,63,.3); border-left: 4px solid #3b533f; background: #e8ede8; font-size: 1.75rem; }
 @media (min-width: 768px) {
