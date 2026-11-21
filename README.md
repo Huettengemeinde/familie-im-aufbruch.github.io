@@ -11,7 +11,7 @@ Die Website ist unter [familie-im-aufbruch.de](https://familie-im-aufbruch.de) e
 
 ### Das richtige KI-Modell auswählen
 
-Wähle in GitHub Copilot bevorzugt **GPT-6 Luna Medium** mit einem **272K-Kontextfenster** aus und prüfe vor jeder Anfrage, dass es ausgewählt ist.
+Wähle in GitHub Copilot bevorzugt **GPT-6 Luna High** mit einem **272K-Kontextfenster** aus und prüfe vor jeder Anfrage, dass es ausgewählt ist.
 
 ## Inhalte
 
